@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
+  message-id="urn:uuid:7e33e8cf-79e8-4148-8418-5398f6b0e4a5"
+  last-modified="2019-02-25T13:42:12Z"
+  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <data><terminal-device xmlns="http://openconfig.net/yang/terminal-device">
+<logical-channels>
+<channel xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">
+<index>131328</index>
+<state>
+<index>131328</index>
+<admin-state>ENABLED</admin-state>
+<logical-channel-type>oc-opt-types:PROT_OTN</logical-channel-type>
+<trib-protocol>oc-opt-types:PROT_OTU4</trib-protocol>
+<description>preset</description>
+</state>
+<logical-channel-assignments>
+<assignment>
+<index>1</index>
+<state>
+<index>1</index>
+<assignment-type>OPTICAL_CHANNEL</assignment-type>
+<optical-channel>OCH-2/0</optical-channel>
+</state>
+</assignment>
+</logical-channel-assignments>
+<otn>
+<state>
+<q-value>
+<instant>2.70</instant>
+</q-value>
+<fec-uncorrectable-blocks>0</fec-uncorrectable-blocks>
+<errored-blocks>0</errored-blocks>
+<pre-fec-ber>
+<instant>1276027178391814</instant>
+</pre-fec-ber>
+</state>
+</otn>
+</channel>
+<channel xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">
+<index>131073</index>
+<state>
+<index>131073</index>
+<logical-channel-type>oc-opt-types:PROT_ETHERNET</logical-channel-type>
+<trib-protocol>oc-opt-types:PROT_ODU4</trib-protocol>
+<description>preset</description>
+</state>
+<logical-channel-assignments>
+<assignment>
+<index>1</index>
+<state>
+<index>1</index>
+<assignment-type>LOGICAL_CHANNEL</assignment-type>
+<logical-channel>131328</logical-channel>
+</state>
+</assignment>
+</logical-channel-assignments>
+<ingress>
+<state>
+<transceiver>PORT-ce19</transceiver>
+</state>
+</ingress>
+<ethernet>
+<state>
+<out-block-errors>0</out-block-errors>
+<out-pcs-bip-errors>0</out-pcs-bip-errors>
+<in-block-errors>0</in-block-errors>
+<in-pcs-bip-errors>17</in-pcs-bip-errors>
+</state>
+</ethernet>
+</channel>
+<channel xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">
+<index>131074</index>
+<state>
+<index>131074</index>
+<logical-channel-type>oc-opt-types:PROT_ETHERNET</logical-channel-type>
+<trib-protocol>oc-opt-types:PROT_ODU4</trib-protocol>
+<description>preset</description>
+</state>
+<logical-channel-assignments>
+<assignment>
+<index>1</index>
+<state>
+<index>1</index>
+<assignment-type>LOGICAL_CHANNEL</assignment-type>
+<logical-channel>131328</logical-channel>
+</state>
+</assignment>
+</logical-channel-assignments>
+<ingress>
+<state>
+<transceiver>PORT-ce20</transceiver>
+</state>
+</ingress>
+<ethernet>
+<state>
+<out-block-errors>0</out-block-errors>
+<out-pcs-bip-errors>0</out-pcs-bip-errors>
+<in-block-errors>0</in-block-errors>
+<in-pcs-bip-errors>17</in-pcs-bip-errors>
+</state>
+</ethernet>
+</channel>
+</logical-channels>
+</terminal-device>
+
+  </data>
+</rpc-reply>

@@ -1,0 +1,9 @@
+{
+    "rpc-reply": {
+        "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+        "@message-id": "urn:uuid:a5f7cbf8-8f96-429e-b917-cad381b20c7f",
+        "@last-modified": "2019-02-25T13:42:12Z",
+        "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+        "data": null
+    }
+}

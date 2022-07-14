@@ -1,0 +1,116 @@
+{
+    "rpc-reply": {
+        "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+        "@message-id": "urn:uuid:7e33e8cf-79e8-4148-8418-5398f6b0e4a5",
+        "@last-modified": "2019-02-25T13:42:12Z",
+        "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+        "data": {
+            "terminal-device": {
+                "@xmlns": "http://openconfig.net/yang/terminal-device",
+                "logical-channels": {
+                    "channel": [
+                        {
+                            "@xmlns:oc-opt-types": "http://openconfig.net/yang/transport-types",
+                            "index": "131328",
+                            "state": {
+                                "index": "131328",
+                                "admin-state": "ENABLED",
+                                "logical-channel-type": "oc-opt-types:PROT_OTN",
+                                "trib-protocol": "oc-opt-types:PROT_OTU4",
+                                "description": "preset"
+                            },
+                            "logical-channel-assignments": {
+                                "assignment": {
+                                    "index": "1",
+                                    "state": {
+                                        "index": "1",
+                                        "assignment-type": "OPTICAL_CHANNEL",
+                                        "optical-channel": "OCH-2/0"
+                                    }
+                                }
+                            },
+                            "otn": {
+                                "state": {
+                                    "q-value": {
+                                        "instant": "2.70"
+                                    },
+                                    "fec-uncorrectable-blocks": "0",
+                                    "errored-blocks": "0",
+                                    "pre-fec-ber": {
+                                        "instant": "1276027178391814"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@xmlns:oc-opt-types": "http://openconfig.net/yang/transport-types",
+                            "index": "131073",
+                            "state": {
+                                "index": "131073",
+                                "logical-channel-type": "oc-opt-types:PROT_ETHERNET",
+                                "trib-protocol": "oc-opt-types:PROT_ODU4",
+                                "description": "preset"
+                            },
+                            "logical-channel-assignments": {
+                                "assignment": {
+                                    "index": "1",
+                                    "state": {
+                                        "index": "1",
+                                        "assignment-type": "LOGICAL_CHANNEL",
+                                        "logical-channel": "131328"
+                                    }
+                                }
+                            },
+                            "ingress": {
+                                "state": {
+                                    "transceiver": "PORT-ce19"
+                                }
+                            },
+                            "ethernet": {
+                                "state": {
+                                    "out-block-errors": "0",
+                                    "out-pcs-bip-errors": "0",
+                                    "in-block-errors": "0",
+                                    "in-pcs-bip-errors": "17"
+                                }
+                            }
+                        },
+                        {
+                            "@xmlns:oc-opt-types": "http://openconfig.net/yang/transport-types",
+                            "index": "131074",
+                            "state": {
+                                "index": "131074",
+                                "logical-channel-type": "oc-opt-types:PROT_ETHERNET",
+                                "trib-protocol": "oc-opt-types:PROT_ODU4",
+                                "description": "preset"
+                            },
+                            "logical-channel-assignments": {
+                                "assignment": {
+                                    "index": "1",
+                                    "state": {
+                                        "index": "1",
+                                        "assignment-type": "LOGICAL_CHANNEL",
+                                        "logical-channel": "131328"
+                                    }
+                                }
+                            },
+                            "ingress": {
+                                "state": {
+                                    "transceiver": "PORT-ce20"
+                                }
+                            },
+                            "ethernet": {
+                                "state": {
+                                    "out-block-errors": "0",
+                                    "out-pcs-bip-errors": "0",
+                                    "in-block-errors": "0",
+                                    "in-pcs-bip-errors": "17"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

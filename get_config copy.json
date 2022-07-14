@@ -1,0 +1,2037 @@
+{
+    "rpc-reply": {
+        "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+        "@message-id": "urn:uuid:d2a31de7-4e12-477c-9541-da4af22d8d74",
+        "@last-modified": "2019-02-25T13:42:12Z",
+        "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+        "data": {
+            "nacm": {
+                "@xmlns": "urn:ietf:params:xml:ns:yang:ietf-netconf-acm"
+            },
+            "network-instances": {
+                "@xmlns": "http://openconfig.net/yang/network-instance",
+                "network-instance": [
+                    {
+                        "name": "default",
+                        "config": {
+                            "name": "default",
+                            "type": {
+                                "@xmlns:oc-ni-types": "http://openconfig.net/yang/network-instance-types",
+                                "#text": "oc-ni-types:DEFAULT_INSTANCE"
+                            },
+                            "enabled": "true"
+                        },
+                        "protocols": {
+                            "protocol": [
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "identifier": "oc-pol-types:DIRECTLY_CONNECTED",
+                                    "name": "DIRECTLY_CONNECTED",
+                                    "config": {
+                                        "identifier": "oc-pol-types:DIRECTLY_CONNECTED",
+                                        "name": "DIRECTLY_CONNECTED",
+                                        "enabled": "true"
+                                    }
+                                },
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "identifier": "oc-pol-types:OSPF",
+                                    "name": "10",
+                                    "ospfv2": {
+                                        "global": {
+                                            "config": {
+                                                "router-id": "1.1.1.1"
+                                            }
+                                        },
+                                        "areas": {
+                                            "area": {
+                                                "identifier": "0.0.0.0",
+                                                "config": {
+                                                    "identifier": "0.0.0.0"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "config": {
+                                        "identifier": {
+                                            "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                            "#text": "oc-pol-types:OSPF"
+                                        },
+                                        "name": "10",
+                                        "enabled": "true"
+                                    }
+                                },
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "identifier": "oc-pol-types:BGP",
+                                    "name": "100",
+                                    "config": {
+                                        "identifier": "oc-pol-types:BGP",
+                                        "name": "100",
+                                        "enabled": "true"
+                                    },
+                                    "bgp": {
+                                        "global": {
+                                            "config": {
+                                                "as": "100"
+                                            }
+                                        },
+                                        "neighbors": {
+                                            "neighbor": {
+                                                "neighbor-address": "10.11.201.1",
+                                                "afi-safis": {
+                                                    "afi-safi": {
+                                                        "@xmlns:oc-bgp-types": "http://openconfig.net/yang/bgp-types",
+                                                        "afi-safi-name": "oc-bgp-types:IPV4_UNICAST",
+                                                        "config": {
+                                                            "afi-safi-name": "oc-bgp-types:IPV4_UNICAST",
+                                                            "enabled": "true"
+                                                        }
+                                                    }
+                                                },
+                                                "config": {
+                                                    "neighbor-address": "10.11.201.1",
+                                                    "peer-as": "200"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "tables": {
+                            "@xmlns:oc-types": "http://openconfig.net/yang/openconfig-types",
+                            "table": [
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                    "address-family": "oc-types:IPV4",
+                                    "config": {
+                                        "protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                        "address-family": "oc-types:IPV4"
+                                    }
+                                },
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                    "address-family": "oc-types:IPV6",
+                                    "config": {
+                                        "protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                        "address-family": "oc-types:IPV6"
+                                    }
+                                },
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "protocol": "oc-pol-types:OSPF",
+                                    "address-family": "oc-types:IPV4",
+                                    "config": {
+                                        "protocol": "oc-pol-types:OSPF",
+                                        "address-family": "oc-types:IPV4"
+                                    }
+                                },
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "protocol": "oc-pol-types:BGP",
+                                    "address-family": "oc-types:IPV4",
+                                    "config": {
+                                        "protocol": "oc-pol-types:BGP",
+                                        "address-family": "oc-types:IPV4"
+                                    }
+                                }
+                            ]
+                        },
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "id": "ce1/1",
+                                    "config": {
+                                        "interface": "ce1/1",
+                                        "id": "ce1/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce1/2",
+                                    "config": {
+                                        "interface": "ce1/2",
+                                        "id": "ce1/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce1/3",
+                                    "config": {
+                                        "interface": "ce1/3",
+                                        "id": "ce1/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce1/4",
+                                    "config": {
+                                        "interface": "ce1/4",
+                                        "id": "ce1/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce10/1",
+                                    "config": {
+                                        "interface": "ce10/1",
+                                        "id": "ce10/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce10/2",
+                                    "config": {
+                                        "interface": "ce10/2",
+                                        "id": "ce10/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce10/3",
+                                    "config": {
+                                        "interface": "ce10/3",
+                                        "id": "ce10/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce10/4",
+                                    "config": {
+                                        "interface": "ce10/4",
+                                        "id": "ce10/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce11/1",
+                                    "config": {
+                                        "interface": "ce11/1",
+                                        "id": "ce11/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce11/2",
+                                    "config": {
+                                        "interface": "ce11/2",
+                                        "id": "ce11/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce11/3",
+                                    "config": {
+                                        "interface": "ce11/3",
+                                        "id": "ce11/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce11/4",
+                                    "config": {
+                                        "interface": "ce11/4",
+                                        "id": "ce11/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce12/1",
+                                    "config": {
+                                        "interface": "ce12/1",
+                                        "id": "ce12/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce12/2",
+                                    "config": {
+                                        "interface": "ce12/2",
+                                        "id": "ce12/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce12/3",
+                                    "config": {
+                                        "interface": "ce12/3",
+                                        "id": "ce12/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce12/4",
+                                    "config": {
+                                        "interface": "ce12/4",
+                                        "id": "ce12/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce13/1",
+                                    "config": {
+                                        "interface": "ce13/1",
+                                        "id": "ce13/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce13/2",
+                                    "config": {
+                                        "interface": "ce13/2",
+                                        "id": "ce13/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce13/3",
+                                    "config": {
+                                        "interface": "ce13/3",
+                                        "id": "ce13/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce13/4",
+                                    "config": {
+                                        "interface": "ce13/4",
+                                        "id": "ce13/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce14/1",
+                                    "config": {
+                                        "interface": "ce14/1",
+                                        "id": "ce14/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce14/2",
+                                    "config": {
+                                        "interface": "ce14/2",
+                                        "id": "ce14/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce14/3",
+                                    "config": {
+                                        "interface": "ce14/3",
+                                        "id": "ce14/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce14/4",
+                                    "config": {
+                                        "interface": "ce14/4",
+                                        "id": "ce14/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce15/1",
+                                    "config": {
+                                        "interface": "ce15/1",
+                                        "id": "ce15/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce15/2",
+                                    "config": {
+                                        "interface": "ce15/2",
+                                        "id": "ce15/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce15/3",
+                                    "config": {
+                                        "interface": "ce15/3",
+                                        "id": "ce15/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce15/4",
+                                    "config": {
+                                        "interface": "ce15/4",
+                                        "id": "ce15/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce16/1",
+                                    "config": {
+                                        "interface": "ce16/1",
+                                        "id": "ce16/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce16/2",
+                                    "config": {
+                                        "interface": "ce16/2",
+                                        "id": "ce16/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce16/3",
+                                    "config": {
+                                        "interface": "ce16/3",
+                                        "id": "ce16/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce16/4",
+                                    "config": {
+                                        "interface": "ce16/4",
+                                        "id": "ce16/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce17",
+                                    "config": {
+                                        "interface": "ce17",
+                                        "id": "ce17"
+                                    }
+                                },
+                                {
+                                    "id": "ce18",
+                                    "config": {
+                                        "interface": "ce18",
+                                        "id": "ce18"
+                                    }
+                                },
+                                {
+                                    "id": "ce19",
+                                    "config": {
+                                        "interface": "ce19",
+                                        "id": "ce19"
+                                    }
+                                },
+                                {
+                                    "id": "ce2/1",
+                                    "config": {
+                                        "interface": "ce2/1",
+                                        "id": "ce2/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce2/2",
+                                    "config": {
+                                        "interface": "ce2/2",
+                                        "id": "ce2/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce2/3",
+                                    "config": {
+                                        "interface": "ce2/3",
+                                        "id": "ce2/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce2/4",
+                                    "config": {
+                                        "interface": "ce2/4",
+                                        "id": "ce2/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce20",
+                                    "config": {
+                                        "interface": "ce20",
+                                        "id": "ce20"
+                                    }
+                                },
+                                {
+                                    "id": "ce21",
+                                    "config": {
+                                        "interface": "ce21",
+                                        "id": "ce21"
+                                    }
+                                },
+                                {
+                                    "id": "ce22",
+                                    "config": {
+                                        "interface": "ce22",
+                                        "id": "ce22"
+                                    }
+                                },
+                                {
+                                    "id": "ce23",
+                                    "config": {
+                                        "interface": "ce23",
+                                        "id": "ce23"
+                                    }
+                                },
+                                {
+                                    "id": "ce24",
+                                    "config": {
+                                        "interface": "ce24",
+                                        "id": "ce24"
+                                    }
+                                },
+                                {
+                                    "id": "ce25",
+                                    "config": {
+                                        "interface": "ce25",
+                                        "id": "ce25"
+                                    }
+                                },
+                                {
+                                    "id": "ce26",
+                                    "config": {
+                                        "interface": "ce26",
+                                        "id": "ce26"
+                                    }
+                                },
+                                {
+                                    "id": "ce27",
+                                    "config": {
+                                        "interface": "ce27",
+                                        "id": "ce27"
+                                    }
+                                },
+                                {
+                                    "id": "ce28",
+                                    "config": {
+                                        "interface": "ce28",
+                                        "id": "ce28"
+                                    }
+                                },
+                                {
+                                    "id": "ce29",
+                                    "config": {
+                                        "interface": "ce29",
+                                        "id": "ce29"
+                                    }
+                                },
+                                {
+                                    "id": "ce3/1",
+                                    "config": {
+                                        "interface": "ce3/1",
+                                        "id": "ce3/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce3/2",
+                                    "config": {
+                                        "interface": "ce3/2",
+                                        "id": "ce3/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce3/3",
+                                    "config": {
+                                        "interface": "ce3/3",
+                                        "id": "ce3/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce3/4",
+                                    "config": {
+                                        "interface": "ce3/4",
+                                        "id": "ce3/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce30",
+                                    "config": {
+                                        "interface": "ce30",
+                                        "id": "ce30"
+                                    }
+                                },
+                                {
+                                    "id": "ce31",
+                                    "config": {
+                                        "interface": "ce31",
+                                        "id": "ce31"
+                                    }
+                                },
+                                {
+                                    "id": "ce32",
+                                    "config": {
+                                        "interface": "ce32",
+                                        "id": "ce32"
+                                    }
+                                },
+                                {
+                                    "id": "ce4/1",
+                                    "config": {
+                                        "interface": "ce4/1",
+                                        "id": "ce4/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce4/2",
+                                    "config": {
+                                        "interface": "ce4/2",
+                                        "id": "ce4/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce4/3",
+                                    "config": {
+                                        "interface": "ce4/3",
+                                        "id": "ce4/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce4/4",
+                                    "config": {
+                                        "interface": "ce4/4",
+                                        "id": "ce4/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce5/1",
+                                    "config": {
+                                        "interface": "ce5/1",
+                                        "id": "ce5/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce5/2",
+                                    "config": {
+                                        "interface": "ce5/2",
+                                        "id": "ce5/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce5/3",
+                                    "config": {
+                                        "interface": "ce5/3",
+                                        "id": "ce5/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce5/4",
+                                    "config": {
+                                        "interface": "ce5/4",
+                                        "id": "ce5/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce6/1",
+                                    "config": {
+                                        "interface": "ce6/1",
+                                        "id": "ce6/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce6/2",
+                                    "config": {
+                                        "interface": "ce6/2",
+                                        "id": "ce6/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce6/3",
+                                    "config": {
+                                        "interface": "ce6/3",
+                                        "id": "ce6/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce6/4",
+                                    "config": {
+                                        "interface": "ce6/4",
+                                        "id": "ce6/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce7/1",
+                                    "config": {
+                                        "interface": "ce7/1",
+                                        "id": "ce7/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce7/2",
+                                    "config": {
+                                        "interface": "ce7/2",
+                                        "id": "ce7/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce7/3",
+                                    "config": {
+                                        "interface": "ce7/3",
+                                        "id": "ce7/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce7/4",
+                                    "config": {
+                                        "interface": "ce7/4",
+                                        "id": "ce7/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce8/1",
+                                    "config": {
+                                        "interface": "ce8/1",
+                                        "id": "ce8/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce8/2",
+                                    "config": {
+                                        "interface": "ce8/2",
+                                        "id": "ce8/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce8/3",
+                                    "config": {
+                                        "interface": "ce8/3",
+                                        "id": "ce8/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce8/4",
+                                    "config": {
+                                        "interface": "ce8/4",
+                                        "id": "ce8/4"
+                                    }
+                                },
+                                {
+                                    "id": "ce9/1",
+                                    "config": {
+                                        "interface": "ce9/1",
+                                        "id": "ce9/1"
+                                    }
+                                },
+                                {
+                                    "id": "ce9/2",
+                                    "config": {
+                                        "interface": "ce9/2",
+                                        "id": "ce9/2"
+                                    }
+                                },
+                                {
+                                    "id": "ce9/3",
+                                    "config": {
+                                        "interface": "ce9/3",
+                                        "id": "ce9/3"
+                                    }
+                                },
+                                {
+                                    "id": "ce9/4",
+                                    "config": {
+                                        "interface": "ce9/4",
+                                        "id": "ce9/4"
+                                    }
+                                },
+                                {
+                                    "id": "lo",
+                                    "config": {
+                                        "interface": "lo",
+                                        "id": "lo"
+                                    }
+                                }
+                            ]
+                        },
+                        "table-connections": [
+                            {
+                                "@xmlns:oc-types": "http://openconfig.net/yang/openconfig-types",
+                                "table-connection": {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "src-protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                    "dst-protocol": "oc-pol-types:OSPF",
+                                    "address-family": "oc-types:IPV4",
+                                    "config": {
+                                        "src-protocol": {
+                                            "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                            "#text": "oc-pol-types:DIRECTLY_CONNECTED"
+                                        },
+                                        "dst-protocol": {
+                                            "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                            "#text": "oc-pol-types:OSPF"
+                                        },
+                                        "address-family": {
+                                            "@xmlns:oc-types": "http://openconfig.net/yang/openconfig-types",
+                                            "#text": "oc-types:IPV4"
+                                        },
+                                        "dst-instance": {
+                                            "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-oc-ni-augments",
+                                            "#text": "10"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                "table-connection": {
+                                    "@xmlns:oc-types": "http://openconfig.net/yang/openconfig-types",
+                                    "src-protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                    "dst-protocol": "oc-pol-types:BGP",
+                                    "address-family": "oc-types:IPV4",
+                                    "config": {
+                                        "dst-protocol": {
+                                            "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                            "#text": "oc-pol-types:BGP"
+                                        },
+                                        "address-family": {
+                                            "@xmlns:oc-types": "http://openconfig.net/yang/openconfig-types",
+                                            "#text": "oc-types:IPV4"
+                                        },
+                                        "dst-instance": {
+                                            "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-oc-ni-augments",
+                                            "#text": "100"
+                                        },
+                                        "default-import-policy": "ACCEPT_ROUTE",
+                                        "src-protocol": {
+                                            "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                            "#text": "oc-pol-types:DIRECTLY_CONNECTED"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "management",
+                        "config": {
+                            "name": "management",
+                            "type": {
+                                "@xmlns:oc-ni-types": "http://openconfig.net/yang/network-instance-types",
+                                "#text": "oc-ni-types:L3VRF"
+                            },
+                            "enabled": "true",
+                            "enabled-address-families": [
+                                {
+                                    "@xmlns:oc-types": "http://openconfig.net/yang/openconfig-types",
+                                    "#text": "oc-types:IPV4"
+                                },
+                                {
+                                    "@xmlns:oc-types": "http://openconfig.net/yang/openconfig-types",
+                                    "#text": "oc-types:IPV6"
+                                }
+                            ]
+                        },
+                        "protocols": {
+                            "protocol": [
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "identifier": "oc-pol-types:DIRECTLY_CONNECTED",
+                                    "name": "DIRECTLY_CONNECTED",
+                                    "config": {
+                                        "identifier": "oc-pol-types:DIRECTLY_CONNECTED",
+                                        "name": "DIRECTLY_CONNECTED",
+                                        "enabled": "true"
+                                    }
+                                },
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "identifier": "oc-pol-types:STATIC",
+                                    "name": "static-routes",
+                                    "config": {
+                                        "identifier": "oc-pol-types:STATIC",
+                                        "name": "static-routes"
+                                    },
+                                    "static-routes": {
+                                        "static": {
+                                            "prefix": "0.0.0.0/0",
+                                            "next-hops": {
+                                                "next-hop": {
+                                                    "index": "192.168.3.1",
+                                                    "interface-ref": {
+                                                        "config": {
+                                                            "interface": "eth0"
+                                                        }
+                                                    },
+                                                    "config": {
+                                                        "index": "192.168.3.1",
+                                                        "next-hop": "192.168.3.1"
+                                                    }
+                                                }
+                                            },
+                                            "config": {
+                                                "prefix": "0.0.0.0/0"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "tables": {
+                            "@xmlns:oc-types": "http://openconfig.net/yang/openconfig-types",
+                            "table": [
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                    "address-family": "oc-types:IPV4",
+                                    "config": {
+                                        "protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                        "address-family": "oc-types:IPV4"
+                                    }
+                                },
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                    "address-family": "oc-types:IPV6",
+                                    "config": {
+                                        "protocol": "oc-pol-types:DIRECTLY_CONNECTED",
+                                        "address-family": "oc-types:IPV6"
+                                    }
+                                },
+                                {
+                                    "@xmlns:oc-pol-types": "http://openconfig.net/yang/policy-types",
+                                    "protocol": "oc-pol-types:STATIC",
+                                    "address-family": "oc-types:IPV4",
+                                    "config": {
+                                        "protocol": "oc-pol-types:STATIC",
+                                        "address-family": "oc-types:IPV4"
+                                    }
+                                }
+                            ]
+                        },
+                        "interfaces": {
+                            "interface": [
+                                {
+                                    "id": "eth0",
+                                    "config": {
+                                        "interface": "eth0",
+                                        "id": "eth0"
+                                    }
+                                },
+                                {
+                                    "id": "lo.management",
+                                    "config": {
+                                        "interface": "lo.management",
+                                        "id": "lo.management"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "interfaces": {
+                "@xmlns": "http://openconfig.net/yang/interfaces",
+                "interface": [
+                    {
+                        "name": "ce1/1",
+                        "config": {
+                            "name": "ce1/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        },
+                        "subinterfaces": {
+                            "subinterface": {
+                                "index": "0",
+                                "ipv4": {
+                                    "@xmlns": "http://openconfig.net/yang/interfaces/ip",
+                                    "addresses": {
+                                        "address": {
+                                            "ip": "10.11.201.96",
+                                            "config": {
+                                                "ip": "10.11.201.96",
+                                                "prefix-length": "31"
+                                            }
+                                        }
+                                    }
+                                },
+                                "config": {
+                                    "index": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce1/2",
+                        "config": {
+                            "name": "ce1/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce1/3",
+                        "config": {
+                            "name": "ce1/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce1/4",
+                        "config": {
+                            "name": "ce1/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce10/1",
+                        "config": {
+                            "name": "ce10/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce10/2",
+                        "config": {
+                            "name": "ce10/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce10/3",
+                        "config": {
+                            "name": "ce10/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce10/4",
+                        "config": {
+                            "name": "ce10/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce11/1",
+                        "config": {
+                            "name": "ce11/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce11/2",
+                        "config": {
+                            "name": "ce11/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce11/3",
+                        "config": {
+                            "name": "ce11/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce11/4",
+                        "config": {
+                            "name": "ce11/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce12/1",
+                        "config": {
+                            "name": "ce12/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce12/2",
+                        "config": {
+                            "name": "ce12/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce12/3",
+                        "config": {
+                            "name": "ce12/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce12/4",
+                        "config": {
+                            "name": "ce12/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce13/1",
+                        "config": {
+                            "name": "ce13/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce13/2",
+                        "config": {
+                            "name": "ce13/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce13/3",
+                        "config": {
+                            "name": "ce13/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce13/4",
+                        "config": {
+                            "name": "ce13/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce14/1",
+                        "config": {
+                            "name": "ce14/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce14/2",
+                        "config": {
+                            "name": "ce14/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce14/3",
+                        "config": {
+                            "name": "ce14/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce14/4",
+                        "config": {
+                            "name": "ce14/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce15/1",
+                        "config": {
+                            "name": "ce15/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce15/2",
+                        "config": {
+                            "name": "ce15/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce15/3",
+                        "config": {
+                            "name": "ce15/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce15/4",
+                        "config": {
+                            "name": "ce15/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce16/1",
+                        "config": {
+                            "name": "ce16/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce16/2",
+                        "config": {
+                            "name": "ce16/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce16/3",
+                        "config": {
+                            "name": "ce16/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce16/4",
+                        "config": {
+                            "name": "ce16/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce17",
+                        "config": {
+                            "name": "ce17",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce18",
+                        "config": {
+                            "name": "ce18",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce19",
+                        "config": {
+                            "name": "ce19",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        },
+                        "subinterfaces": {
+                            "subinterface": {
+                                "index": "0",
+                                "ipv4": {
+                                    "@xmlns": "http://openconfig.net/yang/interfaces/ip",
+                                    "addresses": {
+                                        "address": {
+                                            "ip": "10.11.201.0",
+                                            "config": {
+                                                "ip": "10.11.201.0",
+                                                "prefix-length": "31"
+                                            }
+                                        }
+                                    }
+                                },
+                                "config": {
+                                    "index": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce2/1",
+                        "config": {
+                            "name": "ce2/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce2/2",
+                        "config": {
+                            "name": "ce2/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce2/3",
+                        "config": {
+                            "name": "ce2/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce2/4",
+                        "config": {
+                            "name": "ce2/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce20",
+                        "config": {
+                            "name": "ce20",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce21",
+                        "config": {
+                            "name": "ce21",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce22",
+                        "config": {
+                            "name": "ce22",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce23",
+                        "config": {
+                            "name": "ce23",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce24",
+                        "config": {
+                            "name": "ce24",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce25",
+                        "config": {
+                            "name": "ce25",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce26",
+                        "config": {
+                            "name": "ce26",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce27",
+                        "config": {
+                            "name": "ce27",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce28",
+                        "config": {
+                            "name": "ce28",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce29",
+                        "config": {
+                            "name": "ce29",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce3/1",
+                        "config": {
+                            "name": "ce3/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce3/2",
+                        "config": {
+                            "name": "ce3/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce3/3",
+                        "config": {
+                            "name": "ce3/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce3/4",
+                        "config": {
+                            "name": "ce3/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce30",
+                        "config": {
+                            "name": "ce30",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce31",
+                        "config": {
+                            "name": "ce31",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce32",
+                        "config": {
+                            "name": "ce32",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce4/1",
+                        "config": {
+                            "name": "ce4/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce4/2",
+                        "config": {
+                            "name": "ce4/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce4/3",
+                        "config": {
+                            "name": "ce4/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce4/4",
+                        "config": {
+                            "name": "ce4/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce5/1",
+                        "config": {
+                            "name": "ce5/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce5/2",
+                        "config": {
+                            "name": "ce5/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce5/3",
+                        "config": {
+                            "name": "ce5/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce5/4",
+                        "config": {
+                            "name": "ce5/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce6/1",
+                        "config": {
+                            "name": "ce6/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce6/2",
+                        "config": {
+                            "name": "ce6/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce6/3",
+                        "config": {
+                            "name": "ce6/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce6/4",
+                        "config": {
+                            "name": "ce6/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce7/1",
+                        "config": {
+                            "name": "ce7/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce7/2",
+                        "config": {
+                            "name": "ce7/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce7/3",
+                        "config": {
+                            "name": "ce7/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce7/4",
+                        "config": {
+                            "name": "ce7/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce8/1",
+                        "config": {
+                            "name": "ce8/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce8/2",
+                        "config": {
+                            "name": "ce8/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce8/3",
+                        "config": {
+                            "name": "ce8/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce8/4",
+                        "config": {
+                            "name": "ce8/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce9/1",
+                        "config": {
+                            "name": "ce9/1",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        },
+                        "subinterfaces": {
+                            "subinterface": {
+                                "index": "0",
+                                "ipv4": {
+                                    "@xmlns": "http://openconfig.net/yang/interfaces/ip",
+                                    "addresses": {
+                                        "address": {
+                                            "ip": "192.168.2.1",
+                                            "config": {
+                                                "ip": "192.168.2.1",
+                                                "prefix-length": "24"
+                                            }
+                                        }
+                                    }
+                                },
+                                "config": {
+                                    "index": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce9/2",
+                        "config": {
+                            "name": "ce9/2",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce9/3",
+                        "config": {
+                            "name": "ce9/3",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ce9/4",
+                        "config": {
+                            "name": "ce9/4",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        }
+                    },
+                    {
+                        "name": "eth0",
+                        "config": {
+                            "name": "eth0",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:ethernetCsmacd"
+                            }
+                        },
+                        "subinterfaces": {
+                            "subinterface": {
+                                "index": "0",
+                                "ipv4": {
+                                    "@xmlns": "http://openconfig.net/yang/interfaces/ip",
+                                    "addresses": {
+                                        "address": {
+                                            "ip": "10.11.200.16",
+                                            "config": {
+                                                "ip": "10.11.200.16",
+                                                "prefix-length": "24"
+                                            }
+                                        }
+                                    }
+                                },
+                                "config": {
+                                    "index": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "lo",
+                        "config": {
+                            "name": "lo",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:softwareLoopback"
+                            }
+                        },
+                        "subinterfaces": {
+                            "subinterface": {
+                                "index": "0",
+                                "ipv4": {
+                                    "@xmlns": "http://openconfig.net/yang/interfaces/ip",
+                                    "addresses": {
+                                        "address": {
+                                            "ip": "127.0.0.1",
+                                            "config": {
+                                                "ip": "127.0.0.1",
+                                                "prefix-length": "8"
+                                            }
+                                        }
+                                    }
+                                },
+                                "config": {
+                                    "index": "0"
+                                },
+                                "ipv6": {
+                                    "@xmlns": "http://openconfig.net/yang/interfaces/ip",
+                                    "addresses": {
+                                        "address": {
+                                            "ip": "::1",
+                                            "config": {
+                                                "ip": "::1",
+                                                "prefix-length": "128"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "lo.management",
+                        "config": {
+                            "name": "lo.management",
+                            "type": {
+                                "@xmlns:ianaift": "urn:ietf:params:xml:ns:yang:iana-if-type",
+                                "#text": "ianaift:softwareLoopback"
+                            }
+                        },
+                        "subinterfaces": {
+                            "subinterface": {
+                                "index": "0",
+                                "ipv4": {
+                                    "@xmlns": "http://openconfig.net/yang/interfaces/ip",
+                                    "addresses": {
+                                        "address": {
+                                            "ip": "127.0.0.1",
+                                            "config": {
+                                                "ip": "127.0.0.1",
+                                                "prefix-length": "8"
+                                            }
+                                        }
+                                    }
+                                },
+                                "config": {
+                                    "index": "0"
+                                },
+                                "ipv6": {
+                                    "@xmlns": "http://openconfig.net/yang/interfaces/ip",
+                                    "addresses": {
+                                        "address": {
+                                            "ip": "::1",
+                                            "config": {
+                                                "ip": "::1",
+                                                "prefix-length": "128"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "system": {
+                "@xmlns": "http://openconfig.net/yang/system",
+                "config": {
+                    "hostname": "cassini01"
+                },
+                "logging": {
+                    "remote-servers": {
+                        "config": {
+                            "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-oc-sys-deviations",
+                            "vrf": "management"
+                        }
+                    }
+                }
+            },
+            "trigger-failover": {
+                "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-tfo",
+                "config": {
+                    "admin-status": "disable"
+                }
+            },
+            "user-management": {
+                "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-user-management",
+                "users": {
+                    "user": {
+                        "username": "mheni",
+                        "config": {
+                            "username": "mheni",
+                            "role": "network-admin",
+                            "password-hashed": "$1$bJoWnl01$TsD98HeBAabf/GgbanEh80"
+                        }
+                    }
+                }
+            },
+            "ssh-server": {
+                "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-ssh",
+                "vrfs": {
+                    "vrf": [
+                        {
+                            "vrf-name": "default",
+                            "config": {
+                                "vrf-name": "default",
+                                "enable": "false"
+                            }
+                        },
+                        {
+                            "vrf-name": "management",
+                            "config": {
+                                "vrf-name": "management",
+                                "enable": "true"
+                            }
+                        }
+                    ]
+                }
+            },
+            "telnet-server": {
+                "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-telnet",
+                "vrfs": {
+                    "vrf": [
+                        {
+                            "vrf-name": "default",
+                            "config": {
+                                "vrf-name": "default",
+                                "enable": "false"
+                            }
+                        },
+                        {
+                            "vrf-name": "management",
+                            "config": {
+                                "vrf-name": "management",
+                                "enable": "true"
+                            }
+                        }
+                    ]
+                }
+            },
+            "ntp": {
+                "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-ntp",
+                "vrfs": {
+                    "vrf": {
+                        "vrf-name": "management",
+                        "config": {
+                            "vrf-name": "management",
+                            "feature-enable": "true",
+                            "enable-ntp": "true"
+                        }
+                    }
+                }
+            },
+            "dns-relay": {
+                "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-dns-relay",
+                "config": {
+                    "enable-dns-feature": null,
+                    "enable-dnsv4-relay": null,
+                    "enable-dnsv6-relay": null
+                }
+            },
+            "dns": {
+                "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-dns-client",
+                "vrfs": {
+                    "vrf": [
+                        {
+                            "vrf-name": "default",
+                            "config": {
+                                "vrf-name": "default",
+                                "lookup-enabled": "false"
+                            }
+                        },
+                        {
+                            "vrf-name": "management",
+                            "config": {
+                                "vrf-name": "management",
+                                "lookup-enabled": "true"
+                            }
+                        }
+                    ]
+                }
+            },
+            "snmp": {
+                "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-snmp",
+                "server-traps": {
+                    "config": {
+                        "enable-link-down-trap": "true",
+                        "enable-link-up-trap": "true"
+                    }
+                },
+                "servers": {
+                    "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-snmp-server",
+                    "server": {
+                        "vrf-name": "management",
+                        "config": {
+                            "vrf-name": "management",
+                            "enabled": "true"
+                        },
+                        "snmp-views": {
+                            "@xmlns": "http://www.ipinfusion.com/yang/ocnos/ipi-snmp-server-extended",
+                            "snmp-view": {
+                                "view-name": "all",
+                                "config": {
+                                    "view-name": "all"
+                                },
+                                "oid-trees": {
+                                    "oid-tree": {
+                                        "oid": ".1",
+                                        "config": {
+                                            "oid": ".1",
+                                            "filter-type": "included"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "components": {
+                "@xmlns": "http://openconfig.net/yang/platform",
+                "component": {
+                    "name": "SLOT-2",
+                    "linecard": {
+                        "@xmlns": "http://openconfig.net/yang/platform/linecard",
+                        "config": {
+                            "power-admin-state": "POWER_ENABLED"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
