@@ -1,0 +1,8 @@
+{
+    "10.11.200.16":{
+        "management_protocol":"netconf",
+        "port":"830",
+        "username":"ocnos",
+        "password":"ocnos"
+    }
+}
