@@ -18,7 +18,7 @@ openconfig_paths={
     'freq':'/terminal-device/coherent-module/network-interfaces/interface/config/frequency'
 }
 
-cassini_switch = {"host":"10.11.200.16",
+cassini_switch = {"host":"10.11.200.18",
                     "port":"830",
                     "username":"ocnos",
                     "password":"ocnos"}

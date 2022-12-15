@@ -1,12 +1,11 @@
 from config.config import Config
+from parser.parser import Parser
+from netconf.mgmt_netconf import Mgmt_netconf
 import os,json, time
 from threading import Thread
 
 TOKEN = ''
-def mgmt_netconf():
-    print("netconfprotocole")
 
-    None
 def mgmt_restconf():
     print("restconfprotocole")
     None
@@ -24,6 +23,7 @@ def controllerAuthentication(conf_file_contents):
 
 def collectConfig():
     while(True):
+        network_state = {}
         devicesConfig = open('config/devices.json', 'r')
         devicesConfigData = json.load(devicesConfig)
         devicesConfig.close()
@@ -31,18 +31,26 @@ def collectConfig():
         for device in json.loads(cfg.conf_file_contents['TARGETS']['devices']):
             try:
                 match devicesConfigData[device]["management_protocol"]:
+                    
                     case "netconf":
-                        mgmt_netconf()
-                    case "restconf":
-                        mgmt_restconf()
-                    case "gnmi":
-                        mgmt_gnmi()
-                    case default:
-                        print("invalid protocol")
+                        config = mgmt_netconf.get_all_config(devicesConfigData[device])
+                        #jsonDeviceConfig = parser.config2json(config)
+                        dictDeviceConfig = parser.config2dict(config)
+                        network_state[device]=dictDeviceConfig
 
-                
+                        
+
+
+                    
+
             except:
-                print(device,"'s management_protocol unknown")
+                print("Error in collecting data for ",device)
+            
+        with open("%s.json" %"network_state", 'w') as json_file:
+            
+            json_file.write(json.dumps(network_state,indent=4))
+            json_file.close()
+        print("done")
         time.sleep(10)
 
         
@@ -55,5 +63,7 @@ def collectConfig():
 
 if __name__ == '__main__':
     cfg = Config()
+    parser = Parser()
+    mgmt_netconf = Mgmt_netconf()
     Thread(target=controllerAuthentication, args=(cfg.conf_file_contents,)).start()
     Thread(target=collectConfig,).start()
